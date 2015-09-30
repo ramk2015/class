@@ -49,17 +49,18 @@ class Band(Drummer, Guitarist, Bassist):
         else: 
             print "you have chosen a drummer for ",self.name
             mem = Drummer()
+            print mem.__class__.__name__
     def fire(self, mem):
         self.members.remove(mem)
         print "you have fired ",mem," from ",self.name
     def play(self, length):
-        for i in self.members:
-            temp = self.members[i]
-            print temp.__class__.__name__
+        for i in range(len(self.members)):
+            #temp = self.members[i]
+            print self.members[i].__class__.__name__
             #if self.members[i].__class__.__name__ == "Drummer":
              #   self.members[i].count()
-        for i in self.members:
-            self.members[i].solo(length)
+       # for i in range(len(self.members)):
+        #    self.members[i].solo(length)
             
         
             
